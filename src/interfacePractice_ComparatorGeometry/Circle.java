@@ -1,5 +1,6 @@
 package interfacePractice_ComparatorGeometry;
 
+
 public class Circle extends Shape {
     private double radius = 1.0;
 
@@ -33,4 +34,5 @@ public class Circle extends Shape {
                 + getRadius() + ", which is subclass of "
                 + super.toString();
     }
+
 }

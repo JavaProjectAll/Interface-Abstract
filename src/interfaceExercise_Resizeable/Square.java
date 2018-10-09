@@ -35,7 +35,13 @@ public class Square extends Rectangle{
     @Override
     public String toString() {
         return "A square with side = "
-                + getSide() + ", which is subclas of"
-                + super.toString();
+                + getSide();
+    }
+
+    @Override
+    public void resize(double percent){
+        this.side += (this.side*percent)/100;
+        System.out.print("A rectangle increased size to " + percent + "% ");
+        System.out.println("Side new = "+this.side);
     }
 }

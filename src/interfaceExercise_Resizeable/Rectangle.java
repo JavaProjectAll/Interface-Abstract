@@ -1,6 +1,6 @@
 package interfaceExercise_Resizeable;
 
-public class Rectangle extends Shape{
+public class Rectangle extends Shape {
     private double width = 10.0;
     private double length = 5.0;
 
@@ -44,20 +44,22 @@ public class Rectangle extends Shape{
         return width * length;
     }
 
-    public double getPerimeter(){
+    public double getPerimeter() {
         return (width + length) * 2;
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return "A rectangle with width = "
-                +getWidth()+" and length = "
-                +getlength()+", which is subclass of "
-                +super.toString();
+                + getWidth() + " and length = "
+                + getlength();
     }
 
     @Override
-    public void resize() {
-
+    public void resize(double percent) {
+        this.width += (this.width * percent) / 100;
+        this.length += (this.length * percent) / 100;
+        System.out.print("A rectangle increased size to " + percent + "% ");
+        System.out.println("Width new = " + this.width + " - Length new = " + this.length);
     }
 }

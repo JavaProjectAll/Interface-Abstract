@@ -30,12 +30,13 @@ public class Circle extends Shape {
     @Override
     public String toString() {
         return "A Circle with radius = "
-                + getRadius() + ", which is subclass of "
-                + super.toString();
+                + getRadius();
     }
 
     @Override
-    public void resize() {
-
+    public void resize(double percent) {
+        this.radius += (this.radius * percent) / 100;
+        System.out.print("A circle increased size to " + percent + "% ");
+        System.out.println("Radis new = " + this.radius);
     }
 }
