@@ -1,6 +1,5 @@
 package interfacePractice_ComparatorGeometry;
 
-public interface Comparator<C extends Shape> {
-    int compareCircle(Circle c1, Circle c2);
-    int compareRectangle(Rectangle r1, Rectangle r2);
+public interface Comparator<T> {
+    int compare(T t1, T t2);
 }
